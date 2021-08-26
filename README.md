@@ -1,2 +1,1 @@
-Install spark 
-Perform basic operations with spark on datasets.
+Install spark and perform basic operations with spark on datasets.
