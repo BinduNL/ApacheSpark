@@ -1,1 +1,12 @@
-
+from pyspark.sql.functions import *
+rawDF = spark.read.json("/home/hadoop/ipl_json", multiLine = "true")
+DF1 = rawDF.select(explode("innings").alias("innings"))
+DF1.show()
+DF2 = DF1.select(explode("innings.overs.deliveries").alias("overs"))
+DF2.show()
+DF3 = DF2.select("overs.batter")
+DF3.show()
+DF4 = DF2.select("overs.bowler")
+DF4.show()
+DF5 = DF2.select("overs.batter","overs.bowler","overs.runs")
+DF5.show()
