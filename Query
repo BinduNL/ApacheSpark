@@ -10,5 +10,3 @@ DF4 = DF2.select("overs.bowler")
 DF4.show()
 DF5 = DF2.select("overs.batter","overs.bowler","overs.runs")
 DF5.show()
-DF6=DF2.select("overs.batter").groupBy("bowler")
-
